@@ -67,9 +67,10 @@ Loading cached images from config file.
      6. 启动容器服务
         > sudo kubectl run kube-nginx999 --image=nginx:latest --port=80 --image-pull-policy=IfNotPresent
         - 若成功启动，terminal提示：deployment "kube-nginx999" created
-         ![image][./Kubernetes_src/1.png]
+         ![image][https://github.com/TactfulYuu/SE_homework4/blob/master/Part2-Kubernetes/Kubernetes_src/1.png]
      7. 检查状态
         > sudo kubectl get pods
+         ![image][https://github.com/TactfulYuu/SE_homework4/blob/master/Part2-Kubernetes/Kubernetes_src/2.png]
      8. 发布服务
         > sudo kubectl expose deployment kube-nginx999 --type=NodePort
         - 若成功发布，terminal会提示：service "kube-nginx999" exposed
@@ -77,23 +78,23 @@ Loading cached images from config file.
         > sudo minikube service kube-nginx999 --url
         - 若容器服务尚未准备完，terminal会提示：Waiting, endpoint for service is not ready yet...，此时耐心等待
         - 准备完成后terminal会显示服务地址：http://10.0.2.15:30414
-
+         ![image][https://github.com/TactfulYuu/SE_homework4/blob/master/Part2-Kubernetes/Kubernetes_src/3.png]
      10. 访问step9中得到的地址，出现了nginx的首页，代表service成功启动
-
+         ![image][https://github.com/TactfulYuu/SE_homework4/blob/master/Part2-Kubernetes/Kubernetes_src/4.png]
 
      11. 启动dashboard
         > sudo minikube dashboard --url
         - terminal会显示dashboard的地址
         - 在浏览器中访问该地址即可打开dashboard
-
-5. ***通过kubectl进行控制查看***
+         ![image][https://github.com/TactfulYuu/SE_homework4/blob/master/Part2-Kubernetes/Kubernetes_src/5.png]
+1. ***通过kubectl进行控制查看***
     1. 查看所有的节点
         > sudo kubectl get pods --all-namespaces
-
+         ![image][https://github.com/TactfulYuu/SE_homework4/blob/master/Part2-Kubernetes/Kubernetes_src/6.png]
     2. 查看client和server的version
         > sudo kubectl version
-
+         ![image][https://github.com/TactfulYuu/SE_homework4/blob/master/Part2-Kubernetes/Kubernetes_src/7.png]
     3. 查看所有的cs的状态
         > sudo kubectl get cs
-
+         ![image][https://github.com/TactfulYuu/SE_homework4/blob/master/Part2-Kubernetes/Kubernetes_src/8.png]
 
